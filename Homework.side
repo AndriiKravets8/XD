@@ -1,0 +1,130 @@
+{
+  "id": "688f4e67-44b5-45e7-93ee-f2c946361c6f",
+  "version": "2.0",
+  "name": "Homework",
+  "url": "https://portfolio.metamask.io",
+  "tests": [{
+    "id": "dc3d5efc-9d96-4158-a5c6-841ccb08d6db",
+    "name": "Buy",
+    "commands": [{
+      "id": "634e4634-2e6e-4bde-b89b-83222766c01e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "021c93ec-1b17-44a1-91ad-d8fc1c3597d6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sidebar-item-Buy",
+      "targets": [
+        ["id=sidebar-item-Buy", "id"],
+        ["linkText=Buy", "linkText"],
+        ["css=#sidebar-item-Buy", "css:finder"],
+        ["xpath=//a[@id='sidebar-item-Buy']", "xpath:attributes"],
+        ["xpath=//div[@id='desktop-nav-sidebar']/div[2]/nav/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/buy')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Buy')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aed3ad04-1c3c-4371-9231-b7d94bd81003",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=selected-region",
+      "targets": [
+        ["id=selected-region", "id"],
+        ["css=#selected-region", "css:finder"],
+        ["xpath=//input[@id='selected-region']", "xpath:attributes"],
+        ["xpath=//div[@id='onramp-page']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "7cff97a0-1d6a-44b2-b09f-6bbccf005407",
+      "comment": "",
+      "command": "store",
+      "target": "Ukraine",
+      "targets": [],
+      "value": "SearchText"
+    }, {
+      "id": "0edec674-45f9-4c3b-8597-ac1d373edaf5",
+      "comment": "",
+      "command": "echo",
+      "target": "${SearchText}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7f8884f-ed0e-4886-9a15-04d6f2c333f1",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//div[@id='onramp-page']/div/div/div/input",
+      "targets": [
+        ["id=selected-region", "id"],
+        ["css=#selected-region", "css:finder"],
+        ["xpath=//input[@id='selected-region']", "xpath:attributes"],
+        ["xpath=//div[@id='onramp-page']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${SearchText}"
+    }, {
+      "id": "e5d8adde-50ff-4abe-be78-6ea44c5c1ab0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-left",
+      "targets": [
+        ["css=.text-left", "css:finder"],
+        ["xpath=//div[@id='onramp-page']/div/div/div[2]/ul/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb677fc6-0c0b-4fd5-8ecc-dae6948a3938",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text-xs:nth-child(1)",
+      "targets": [
+        ["css=.text-xs:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='onramp-page']/div/div/ul/li/div/div/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Debit or Credit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "55921aac-8828-409a-9150-8f69cf325958",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-xs:nth-child(1)",
+      "targets": [
+        ["css=.text-xs:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='onramp-page']/div/div/ul/li/div/div/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Debit or Credit')]", "xpath:innerText"]
+      ],
+      "value": "Debit or Credit"
+    }, {
+      "id": "1ff63cfe-d269-4851-9154-b93cac7dcf48",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=.sm\\3Apx-10",
+      "targets": [
+        ["css=.sm\\3Apx-10", "css:finder"],
+        ["xpath=//div[@id='page-card']/div", "xpath:idRelative"],
+        ["xpath=//main/div/div", "xpath:position"]
+      ],
+      "value": "EROR"
+    }]
+  }],
+  "suites": [{
+    "id": "94978e1d-d3df-4065-9f46-74e9562d742a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["dc3d5efc-9d96-4158-a5c6-841ccb08d6db"]
+  }],
+  "urls": ["https://portfolio.metamask.io/"],
+  "plugins": []
+}
